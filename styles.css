@@ -1,0 +1,442 @@
+
+
+    * {
+        margin: 0;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+
+    section {
+        padding: 0px;
+        text-align: center;
+        padding-top: 90px;
+    }
+
+    header {
+        color: #fff;
+        background-image: url('Picture1.png');
+        padding: 30px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100px;
+        z-index: 1000;
+        margin: 0;
+    }
+    
+
+    header a img {
+        height: 80px;
+        position: absolute;
+        left: 0px;
+        top: 10px;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('Picture4.png');
+        background-color: #59c8fc;
+        background-position: top;
+        background-size: cover;
+    }
+
+    nav {
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        position: relative;
+    }
+
+    nav a {
+        color: white;
+        transition: color 0.3s ease;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    nav a:hover {
+        color: #00ffffe0;
+    }
+
+    .platform-links {
+        display: flex;
+        gap: 20px;
+        position: absolute; 
+        top: 10px; 
+        right: 20px; 
+    }
+
+    .platform-link {
+        position: absolute;
+    }
+
+    /* Custom Positions for Each Logo */
+    .apple-music {
+    top: 10px; 
+    right: 220px; 
+    height: 45px;
+    width: 45px;
+    }
+
+    .spotify {
+        top: 10px; 
+        right: 180px; 
+        height: 45px;
+        width: 45px;
+    }
+
+    .youtube-music {
+        top: 10px; 
+        right: 140px; 
+        height: 45px;
+        width: 45px;
+    }
+
+    .youtube {
+        top: 10px; 
+        right: 100px; 
+        height: 45px;
+        width: 45px;
+    }
+
+    .deezer {
+        top: 10px; 
+        right: 60px; 
+        height: 45px;
+        width: 45px;
+    }
+
+    .email {
+        top: 10px; 
+        right: 20px; 
+        height: 45px;
+        width: 45px;
+    }
+    .platform-links img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        transition: opacity 0.3s;
+    }
+
+    .platform-links img:hover {
+        opacity: 0.4;
+    }
+
+    .content {
+        max-width: 1200px;
+        margin: 130px auto; /* Adjusted for fixed header */
+        text-align: center;
+    }
+
+
+    footer {
+        background-image: url('Picture1.png');
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center; 
+        color: white; 
+        padding: 40px 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    .newsletter-signup {
+        margin-top: 40px;
+    }
+
+    input[type="email"] {
+        padding: 10px;
+        width: 250px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .answer-options {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .answer-options button {
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .answer-options button:hover {
+        background-color: #ff0a0a;
+    }
+
+    .feedback {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .aboutme-section h2 {
+        color: #e1ddeb;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 30px; 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+        margin: 20px auto;
+        width: 65%; 
+        transition: background-color 0.9s ease;
+    }
+
+    .aboutme-section p {
+        color: #e1ddeb;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 30px; 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+        margin: 20px auto;
+        width: 65%; 
+        transition: background-color 0.9s ease; 
+    }
+
+    .aboutWI-section h2 {
+        color: #01434e;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: #e6e3e72c;
+        border-radius: 30px; 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+        margin: 20px auto;
+        width: 65%; 
+        transition: background-color 0.9s ease; 
+    }
+
+    .aboutWI-content {
+        color: #01434e;
+        font-size: 20px;
+        display: flex; 
+        justify-content: center; 
+        width: 100%; 
+        border-radius: 30px;
+    }
+
+    .aboutWI-left, .aboutWI-right {
+        color: #01434e;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: #e6e3e72c;
+        border-radius: 30px; 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+        margin: 20px auto;
+        width: 65%; 
+        transition: background-color 0.9s ease; 
+        width: 35%; 
+    }
+
+    .music {
+        margin: 30px 0;
+    }
+    
+    .music-links {
+        margin: 30px 0;
+    }
+
+    .music-links h2 {
+        color: #e1ddeb;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 30px; 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+        margin: 20px auto;
+        width: 65%; 
+        transition: background-color 0.9s ease; 
+    }
+
+    .music-links p {
+        color: #faf6f6;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: #0e0b0b;
+        border-radius: 30px; 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+        margin: 20px auto;
+        width: 100%; 
+        transition: background-color 0.9s ease;     
+    }
+    
+    /* Music Section Styling */
+    .music-section {
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Grid layout for the pictures */
+    .grid-pictures {
+        display: flex;
+        flex-direction: column; /* Stack rows vertically */
+        gap: 20px; /* Space between rows */
+    }
+
+    /* Each picture container */
+    .picture-wi {
+        display: flex; /* Make the image and info side by side */
+        align-items: center; /* Align the image and info vertically */
+    }
+
+    /* Styling for odd and even children to switch layout */
+    .picture-wi:nth-child(odd) {
+        flex-direction: row; /* For odd items, image on the left, info on the right */
+    }
+
+    .picture-wi:nth-child(even) {
+        flex-direction: row-reverse; /* For even items, image on the right, info on the left */
+    }
+
+    /* Image styling */
+    .picture-wi img {
+        width: 200px; /* Define fixed width for images */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners */
+        transition: filter 0.3s ease; /* Smooth filter transition */
+    }
+
+    /* Info block */
+    .info {
+        color: #fff; /* Text color */
+        padding: 10px; /* Padding around the text */
+        flex-grow: 1; /* Allow the info block to take available space */
+        margin-left: 15px; /* Space between the image and info text */
+    }
+
+    /* Title styling */
+    .info h4 {
+        margin: 0; /* Remove default margin */
+        font-size: 18px; /* Title font size */
+    }
+
+    /* Paragraph styling */
+    .info p {
+        margin: 5px 0 0; /* Space only at the top */
+        color: #faf6f6; /* Paragraph text color */
+        background-color: #59c8fc23;
+        line-height: 1.5; /* Spacing between lines */
+    }
+
+    /* On hover, blur the image */
+    .picture-wi:hover img {
+        filter: blur(3px); /* Add a subtle blur effect */
+    }
+
+    
+    .social-media {
+        margin: 30px 0;
+    }
+
+    .social-media h2 {
+        color: #01434e;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: #e6e3e72c;
+        border-radius: 30px; 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+        margin: 20px auto;
+        width: 65%; 
+        transition: background-color 0.9s ease; 
+    }
+
+
+    .social-icons {
+        display: flex;
+        padding-top: 10px;
+        justify-content: center;
+        gap: 20px;
+        position: relative; 
+    }
+
+    .social-icons img{
+        object-fit: contain;
+        transition:  opacity 0.5s;
+    }
+
+    /* Custom Positions for Each Logo */
+    .whatsapp img{
+        top: 3200px; 
+        right: 760px; 
+        height: 45px;
+        width: 45px;
+    }
+
+    .instagram img{
+        top: 3200px; 
+        right: 760px; 
+        height: 45px;
+        width: 45px;
+    }
+
+    .tiktok img{
+        top: 3200px; 
+        right: 760px; 
+        height: 45px;
+        width: 45px;
+    }
+
+    .facebook img{
+        top: 3200px; 
+        right: 760px; 
+        height: 45px;
+        width: 45px;
+    }
+
+    .social-icons img:hover {
+        opacity: 0.6;
+    }
+
+    /* Media Query for Smaller Screens */
+    @media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .platform-links {
+        flex-direction: row;
+    }
+    }
+
+    header a img {
+        height: 80px;
+        position: absolute;
+        left: 0px;
+        top: 10px;
+    }
+
+
+
