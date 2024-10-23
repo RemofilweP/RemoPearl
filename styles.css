@@ -322,13 +322,44 @@
         transition: filter 0.3s ease; /* Smooth filter transition */
     }
 
+    .picture-wi img {
+        width: 100%; /* Responsive to its container */
+        max-width: 300px; /* Set a max limit for large screens */
+    }
+    
+
     /* Info block */
     .info {
         color: #fff; /* Text color */
         padding: 10px; /* Padding around the text */
         flex-grow: 1; /* Allow the info block to take available space */
         margin-left: 15px; /* Space between the image and info text */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s ease;
     }
+
+    .picture-wi:hover .info {
+        opacity: 1; /* Show text when hovered */
+    }
+
+    .picture-wi {
+        position: relative;
+    }
+    
+    .picture-wi::after {
+        content: "Click to listen"; /* Indicate user action */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .picture-wi:hover::after {
+        opacity: 1;
+    }
+    
 
     /* Title styling */
     .info h4 {
@@ -430,6 +461,19 @@
         flex-direction: row;
     }
     }
+
+    @media (max-width: 768px) {
+        .info h4 {
+            font-size: 16px;
+        }
+        .info p {
+            font-size: 14px;
+        }
+        .grid-pictures {
+            flex-direction: column; /* Stack images on top of each other for mobile */
+        }
+    }
+    
 
     header a img {
         height: 80px;
