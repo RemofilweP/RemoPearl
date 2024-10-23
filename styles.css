@@ -350,7 +350,6 @@
     }
     
     .picture-wi::after {
-        content: "Click to listen"; /* Indicate user action */
         position: absolute;
         top: 50%;
         left: 50%;
