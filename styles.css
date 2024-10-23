@@ -14,8 +14,11 @@
     }
 
     header {
-        color: #fff;
         background-image: url('Picture1.png');
+        background-size: cover; /* Ensures the image covers the header */
+        background-repeat: no-repeat; /* Prevents image repetition */
+        background-position: center; /* Centers the image */
+        color: #fff;
         padding: 30px 0;
         position: fixed;
         top: 0;
