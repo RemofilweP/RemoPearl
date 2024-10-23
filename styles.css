@@ -64,6 +64,22 @@
         color: #00ffffe0;
     }
 
+   .menu-icon {
+       display: none; /* Hidden by default */
+       cursor: pointer;
+       flex-direction: column;
+       justify-content: space-between;
+       height: 25px;
+   }
+   
+   .menu-icon span {
+       display: block;
+       width: 30px;
+       height: 3px;
+       background-color: #333;
+       margin: 4px 0;
+   }
+
     .platform-links {
         display: flex;
         gap: 20px;
@@ -464,34 +480,32 @@
     }
 
     /* Media Query for Smaller Screens */
-    @media (max-width: 768px) {
-    header {
-        height: auto;
-        padding: 20px 0;
-    }
 
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
+   @media (max-width: 768px) {
+       header {
+           height: auto;
+           padding: 20px 0;
+       }
+   
+       .platform-links {
+           flex-direction: row;
+       }
+   
+       /* Font-size adjustments for mobile */
+       .info h4 {
+           font-size: 16px;
+       }
+   
+       .info p {
+           font-size: 14px;
+       }
+   
+       .grid-pictures {
+           flex-direction: column; /* Stack images on top of each other for mobile */
+       }
+   }
 
-    .platform-links {
-        flex-direction: row;
-    }
-    }
 
-    @media (max-width: 768px) {
-        .info h4 {
-            font-size: 16px;
-        }
-        .info p {
-            font-size: 14px;
-        }
-        .grid-pictures {
-            flex-direction: column; /* Stack images on top of each other for mobile */
-        }
-    }
-    
 
     header a img {
         height: 80px;
