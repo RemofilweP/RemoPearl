@@ -14,6 +14,14 @@
         <a href="index.html">
             <img src="logo use.png" alt="My Logo" style="height: 90px;">
         </a>
+
+        <!-- Hamburger menu icon -->
+        <div class="menu-icon" id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
         <nav>
             <a href="#about-me">About Me</a>
             <a href="#about-wi">About Worth It</a>
@@ -169,31 +177,40 @@
         </section>
 
         <script>
-        // JavaScript to handle audio playback on hover
-        const pictures = document.querySelectorAll('.picture-wi');
-
-        pictures.forEach(picture => {
-            let audio; // Declare audio variable to control playback
-            
-            // Play song snippet on mouse enter
-            picture.addEventListener('mouseenter', () => {
-                const song = picture.getAttribute('data-song');
-                if (song) {
-                    audio = new Audio(song);
-                    audio.play();
-                }
+            // JavaScript to handle audio playback on hover
+            const pictures = document.querySelectorAll('.picture-wi');
+    
+            pictures.forEach(picture => {
+                let audio; // Declare audio variable to control playback
+                
+                // Play song snippet on mouse enter
+                picture.addEventListener('mouseenter', () => {
+                    const song = picture.getAttribute('data-song');
+                    if (song) {
+                        audio = new Audio(song);
+                        audio.play();
+                    }
+                });
+    
+                // Stop song snippet on mouse leave
+                picture.addEventListener('mouseleave', () => {
+                    if (audio) {
+                        audio.pause();
+                        audio.currentTime = 0; // Reset the audio to start
+                    }
+                });
             });
 
-            // Stop song snippet on mouse leave
-            picture.addEventListener('mouseleave', () => {
-                if (audio) {
-                    audio.pause();
-                    audio.currentTime = 0; // Reset the audio to start
-                }
-            });
-        });
+        </script>    
 
-        </script>        
+        <script>
+            const menuIcon = document.getElementById('menu-icon');
+            const navMenu = document.getElementById('nav-menu');
+        
+            menuIcon.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+            });
+    </script>
         
 
         <!-- Connect With Me Section -->
