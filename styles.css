@@ -404,7 +404,7 @@
 
     /* Info block */
     .info {
-        color: #fff; /* Text color */
+        color: #e1ddeb;; /* Text color */
         flex-grow: 1; /* Allow the info block to take available space */
         margin-left: 15px; /* Space between the image and info text */
         opacity: 0; /* Initially hidden */
@@ -442,8 +442,8 @@
     /* Paragraph styling */
     .info p {
         margin: 5px 0 0; /* Space only at the top */
-        color: #faf6f6; /* Paragraph text color */
-        background-color: #59c8fc23;
+        color: #e1ddeb;; /* Paragraph text color */
+        background-color: rgba(0, 0, 0, 0.5);
         line-height: 1.5; /* Spacing between lines */
     }
 
