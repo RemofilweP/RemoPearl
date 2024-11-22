@@ -63,6 +63,65 @@
         color: #00ffffe0;
     }
 
+   /* Hide unnecessary links on mobile */
+   @media (max-width: 768px) {
+       nav a:not(.mobile-visible) {
+           display: none; /* Hide all links except About Me, About Worth It, Music, and Connect */
+       }
+   
+       .music-nav-button {
+           display: block; /* Display the Music menu button */
+       }
+   }
+
+/* Music Nav Button */
+.music-nav-button {
+    display: none; /* Hidden by default (desktop) */
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.music-nav-button:hover {
+    color: #00ffffe0; /* Highlight color on hover */
+}
+
+/* Collapsible Music Links Nav */
+.music-nav {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.music-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.music-nav a:hover {
+    color: #00ffffe0; /* Highlight color */
+}
+
+/* Display the nav when active */
+.music-nav.active {
+    display: flex;
+}
+
+
+
+
    .menu-icon {
        display: none; /* Hidden by default */
        cursor: pointer;
@@ -551,11 +610,6 @@
            flex-direction: column; /* Stack images on top of each other for mobile */
        }
    }
-   @media (min-width: 1024px) {
-       .social-icons img {
-           width: 30px; /* Slightly smaller size for desktop */
-           height: 30px;
-       }
 
 
     header a img {
