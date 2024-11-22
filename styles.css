@@ -406,7 +406,7 @@
    /* Image Styling */
    .picture-wi img {
        width: 40%; /* Image takes up 40% of container */
-       border-radius: 30px;
+       border-radius: 20px;
        transition: filter 0.3s ease;
    }
 
@@ -422,35 +422,35 @@
        transition: opacity 0.5s ease-in-out;
    }
 
-/* Info Title and Text */
-.picture-wi .info h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.picture-wi .info p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* On Tap (Mobile or Hover for Desktop) */
-.picture-wi.tapped img {
-    filter: blur(3px); /* Blur the image */
-}
-
-.picture-wi:hover .info {
-    opacity: 1; /* Show description */
-}
-
-.picture-wi.tapped .info {
-    opacity: 1; /* Show the description */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .grid-pictures {
-        gap: 15px; /* Adjust gap for smaller screens */
-    }
+   /* Info Title and Text */
+   .picture-wi .info h4 {
+       font-size: 20px;
+       margin-bottom: 10px;
+   }
+   
+   .picture-wi .info p {
+       font-size: 16px;
+       line-height: 1.5;
+   }
+   
+   /* On Tap (Mobile or Hover for Desktop) */
+   .picture-wi.tapped img {
+       filter: blur(3px); /* Blur the image */
+   }
+   
+   .picture-wi:hover .info {
+       opacity: 1; /* Show description */
+   }
+   
+   .picture-wi.tapped .info {
+       opacity: 1; /* Show the description */
+   }
+   
+   /* Responsive Adjustments */
+   @media (max-width: 768px) {
+       .grid-pictures {
+           gap: 15px; /* Adjust gap for smaller screens */
+       }
    
    .picture-wi .info h4 {
        font-size: 20px; /* Title font size */
@@ -550,6 +550,14 @@
        height: 40px; /* Maintain square aspect ratio */
        object-fit: contain; /* Ensure proper fit inside the container */
        transition: opacity 0.5s; /* Smooth hover effect */
+   }
+
+   /* Adjustments for larger screens */
+   @media (min-width: 1024px) {
+       .social-icons img {
+           width: 30px; /* Slightly smaller size for desktop */
+           height: 30px;
+       }
    }
 
     /* Custom Positions for Each Logo */
