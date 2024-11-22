@@ -323,8 +323,8 @@
    .picture-wi {
        position: relative;
        display: flex;
-       width: 48%; /* Half the width for desktop */
-       max-width: 500px;
+       width: 48%; 
+       max-width: 100%;
        min-width: 300px;
        align-items: center;
        justify-content: space-between;
