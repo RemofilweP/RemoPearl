@@ -134,8 +134,8 @@
         width: 45px;
     }
     .platform-links img {
-        width: 40px;
-        height: 40px;
+        width: 80%;
+        height: auto;
         object-fit: contain;
         transition: opacity 0.3s;
     }
