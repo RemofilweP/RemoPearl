@@ -403,12 +403,16 @@
 }
 
     /* Info block */
-    .info {
-        color: #e1ddeb;; /* Text color */
-        flex-grow: 1; /* Allow the info block to take available space */
-        margin-left: 15px; /* Space between the image and info text */
-        opacity: 0; /* Initially hidden */
-        transition: opacity 0.3s ease;
+   .info {
+       background-color: rgba(0, 0, 0, 0.5); /* Match About Me background */
+       color: #e1ddeb; /* Match About Me text color */
+       border-radius: 30px; /* Rounded corners like About Me */
+       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Consistent shadow */
+       padding: 20px; /* Same padding as About Me */
+       text-align: center;
+       opacity: 0; /* Initially hidden */
+       transition: opacity 0.3s ease;
+   }
     }
 
     .picture-wi:hover .info {
