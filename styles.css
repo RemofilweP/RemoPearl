@@ -323,7 +323,7 @@
    .picture-wi {
        position: relative;
        display: flex;
-       width: 48%; 
+       width: 100%; 
        max-width: 100%;
        min-width: 300px;
        align-items: center;
