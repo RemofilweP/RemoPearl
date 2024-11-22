@@ -197,32 +197,54 @@
             <div class="feedback"></div>
         </section>
 
-        <script>
-            // JavaScript to handle audio playback on hover
-            const pictures = document.querySelectorAll('.picture-wi');
-    
-            pictures.forEach(picture => {
-                let audio; // Declare audio variable to control playback
-                
-                // Play song snippet on mouse enter
-                picture.addEventListener('mouseenter', () => {
-                    const song = picture.getAttribute('data-song');
-                    if (song) {
-                        audio = new Audio(song);
-                        audio.play();
-                    }
-                });
-    
-                // Stop song snippet on mouse leave
-                picture.addEventListener('mouseleave', () => {
-                    if (audio) {
-                        audio.pause();
-                        audio.currentTime = 0; // Reset the audio to start
-                    }
-                });
-            });
+       <script>
+    // JavaScript to handle audio playback and mobile click functionality
+    const pictures = document.querySelectorAll('.picture-wi');
+    let audio; // Declare audio globally to control playback
 
-        </script>    
+    // Function to play audio
+    const playAudio = (song) => {
+        if (audio) {
+            audio.pause(); // Stop any currently playing audio
+            audio.currentTime = 0; // Reset the audio
+        }
+        audio = new Audio(song);
+        audio.play().catch((err) => {
+            console.error("Audio playback failed:", err);
+        });
+    };
+
+    pictures.forEach((picture) => {
+        // Handle desktop hover functionality
+        picture.addEventListener('mouseenter', () => {
+            if (!isMobileDevice()) {
+                const song = picture.getAttribute('data-song');
+                if (song) playAudio(song);
+            }
+        });
+
+        picture.addEventListener('mouseleave', () => {
+            if (audio) {
+                audio.pause();
+                audio.currentTime = 0; // Reset the audio to start
+            }
+        });
+
+        // Handle mobile tap functionality
+        picture.addEventListener('click', () => {
+            const song = picture.getAttribute('data-song');
+            if (song && isMobileDevice()) {
+                playAudio(song);
+            }
+        });
+    });
+
+    // Function to detect if the user is on a mobile device
+    const isMobileDevice = () => {
+        return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    };
+</script>
+
 
         <script>
             const menuIcon = document.getElementById('menu-icon');
