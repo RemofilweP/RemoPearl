@@ -392,28 +392,31 @@
     .grid-pictures {
         gap: 15px; /* Adjust gap for smaller screens */
     }
-
-    .picture-wi .info h4 {
-        font-size: 18px;
-    }
-
-    .picture-wi .info p {
-        font-size: 14px;
-    }
-}
+   
+   .picture-wi .info h4 {
+       font-size: 20px; /* Title font size */
+       margin-bottom: 10px; /* Space below title */
+       color: inherit; /* Use parent color for consistency */
+   }
+   
+   .picture-wi .info p {
+       font-size: 16px; /* Paragraph font size */
+       line-height: 1.5; /* Line spacing */
+       color: inherit; /* Use parent color for consistency */
+       margin: 0; /* Remove extra margins */
+   }
 
     /* Info block */
    .info {
-       background-color: rgba(0, 0, 0, 0.5); /* Match About Me background */
-       color: #e1ddeb; /* Match About Me text color */
-       border-radius: 30px; /* Rounded corners like About Me */
-       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Consistent shadow */
-       padding: 20px; /* Same padding as About Me */
+       background-color: #e6e3e72c; /* Match About WI background */
+       color: #01434e; /* Match About WI text color */
+       border-radius: 30px; /* Rounded corners for consistency */
+       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Consistent shadow with About WI */
+       padding: 20px; /* Same padding as About WI */
        text-align: center;
        opacity: 0; /* Initially hidden */
        transition: opacity 0.3s ease;
    }
-    }
 
     .picture-wi:hover .info {
         opacity: 1; /* Show text when hovered */
