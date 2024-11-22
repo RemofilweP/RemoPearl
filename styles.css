@@ -486,10 +486,12 @@
         position: relative; 
     }
 
-    .social-icons img{
-        object-fit: contain;
-        transition:  opacity 0.5s;
-    }
+   .social-icons img {
+       width: 40px; /* Consistent size */
+       height: 40px; /* Maintain square aspect ratio */
+       object-fit: contain; /* Ensure proper fit inside the container */
+       transition: opacity 0.5s; /* Smooth hover effect */
+   }
 
     /* Custom Positions for Each Logo */
     .whatsapp img{
@@ -549,7 +551,11 @@
            flex-direction: column; /* Stack images on top of each other for mobile */
        }
    }
-
+   @media (min-width: 1024px) {
+       .social-icons img {
+           width: 30px; /* Slightly smaller size for desktop */
+           height: 30px;
+       }
 
 
     header a img {
