@@ -322,9 +322,16 @@
     
     /* Music Section Styling */
     .music-section {
-        text-align: center;
+        color: #e1ddeb;
+        font-size: 20px;
         padding: 20px;
-    }
+        line-height: 1.6;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 30px; 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+        margin: 20px auto;
+        width: 65%; 
+        transition: background-color 0.9s ease;
 
    .music-section h2 {
         color: #faf6f6;
@@ -344,7 +351,7 @@
     .grid-pictures {
         display: flex;
         flex-direction: column; /* Stack rows vertically */
-        gap: 20px; /* Space between rows */
+        gap: 50px; /* Space between rows */
     }
 
     /* Each picture container */
@@ -355,7 +362,7 @@
        max-width: 400px; /* Limit width for larger screens */
        margin: 0 auto; /* Center pictures */
        overflow: hidden;
-       border-radius: 10px; /* Rounded corners */
+       border-radius: 30px; /* Rounded corners */
        cursor: pointer; /* Indicate it's tappable */
    }
 
