@@ -470,7 +470,7 @@
        background-color: rgba(0, 0, 0, 0.5);
        color: #e1ddeb;
        border-radius: 30px; /* Rounded corners for consistency */
-       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); 
        padding: 20px; 
        text-align: center;
        opacity: 0; /* Initially hidden */
