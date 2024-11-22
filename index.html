@@ -6,27 +6,44 @@
     <title>Remo Pearl</title>
     <link rel="stylesheet" href="styles.css">
     <script> 
-        function detectBrowser() 
-            {    var userAgent = navigator.userAgent; 
-                 var browserName; 
-                 if (userAgent.indexOf("Firefox") > -1) 
-                     { browserName = "Mozilla Firefox"; } 
-                 else if (userAgent.indexOf("Opera") > -1 || userAgent.indexOf("OPR") > -1) 
-                     { browserName = "Opera"; } 
-                 else if (userAgent.indexOf("Trident") > -1) 
-                     { browserName = "Microsoft Internet Explorer"; } 
-                 else if (userAgent.indexOf("Edge") > -1) 
-                     { browserName = "Microsoft Edge"; } 
-                 else if (userAgent.indexOf("Chrome") > -1) 
-                     { browserName = "Google Chrome"; } 
-                 else if (userAgent.indexOf("Safari") > -1) 
-                     { browserName = "Safari"; } 
-                 else { browserName = "Unknown"; } 
-                 alert("You are using: " + browserName); } 
+        function detectSpecs() {
+             var userAgent = navigator.userAgent; 
+             var browserName; 
+             if (userAgent.indexOf("Firefox") > -1){ 
+                 browserName = "Mozilla Firefox"; 
+             } 
+             else if (userAgent.indexOf("Opera") > -1 || userAgent.indexOf("OPR") > -1){ 
+                 browserName = "Opera"; 
+             } 
+             else if (userAgent.indexOf("Trident") > -1){ 
+                 browserName = "Microsoft Internet Explorer"; 
+             } 
+             else if (userAgent.indexOf("Edge") > -1){ 
+                 browserName = "Microsoft Edge"; 
+             } 
+             else if (userAgent.indexOf("Chrome") > -1){ 
+                 browserName = "Google Chrome"; 
+             } 
+             else if (userAgent.indexOf("Safari") > -1){ 
+                 browserName = "Safari"; 
+             } 
+             else { 
+                 browserName = "Unknown"; } 
+
+             var isMobile = window.innerWidth <= 768; // Example breakpoint for mobile devices 
+             var deviceType;
+             if (isMobile){ 
+                 deviceType = "Mobile"; 
+             } 
+             else {  
+                 deviceType = "Desktop"; 
+             }
+            alert("You are using " browserName "on a " deviceType "device");
+        } 
     </script>
     
 </head>
-<body onload="detectBrowser()">
+<body onload="detectSpecs()">
 
     <!-- Header Section with Logo -->
     <header>
