@@ -550,12 +550,20 @@
        object-fit: contain; /* Ensure proper fit inside the container */
        transition: opacity 0.5s; /* Smooth hover effect */
    }
+      
+      /* Adjustments for tablets and larger screens */
+   @media (min-width: 768px) {
+       .social-icons img {
+           width: 20px; /* Reduce size for tablets */
+           height: 20px;
+       }
+   }
 
    /* Adjustments for larger screens */
    @media (min-width: 1024px) {
        .social-icons img {
-           width: 30px; /* Slightly smaller size for desktop */
-           height: 30px;
+           width: 18px; /* Slightly smaller size for desktop */
+           height: 18px;
        }
    }
 
