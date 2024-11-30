@@ -544,28 +544,44 @@
         position: relative; 
     }
 
+     /* Social Media Icons (Set a max size for larger screens) */
    .social-icons img {
-       width: 40px; /* Consistent size */
-       height: 40px; /* Maintain square aspect ratio */
-       object-fit: contain; /* Ensure proper fit inside the container */
-       transition: opacity 0.5s; /* Smooth hover effect */
+       width: 50px;  /* Default size */
+       height: 50px; 
+       object-fit: contain; 
+       transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effects */
    }
-      
-      /* Adjustments for tablets and larger screens */
-   @media (min-width: 768px) {
+   
+   /* Hover Effect */
+   .social-icons img:hover {
+       opacity: 0.7; /* Reduce opacity on hover */
+       transform: scale(1.1); /* Slight zoom effect */
+   }
+   
+   /* Adjust Icon Size for Smaller Screens */
+   @media (max-width: 768px) {
        .social-icons img {
-           width: 20px; /* Reduce size for tablets */
-           height: 20px;
+           width: 40px; /* Smaller size for mobile */
+           height: 40px;
+       }
+   }
+   
+   /* Adjust Icon Size for Medium Screens (Tablet) */
+   @media (min-width: 768px) and (max-width: 1024px) {
+       .social-icons img {
+           width: 45px; /* Medium size */
+           height: 45px;
+       }
+   }
+   
+   /* Adjust Icon Size for Large Screens (Desktop) */
+   @media (min-width: 1024px) {
+       .social-icons img {
+           width: 30px; /* Smaller icons for desktop */
+           height: 30px;
        }
    }
 
-   /* Adjustments for larger screens */
-   @media (min-width: 1024px) {
-       .social-icons img {
-           width: 18px; /* Slightly smaller size for desktop */
-           height: 18px;
-       }
-   }
 
     /* Custom Positions for Each Logo */
     .whatsapp img{
