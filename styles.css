@@ -573,7 +573,14 @@
            height: 45px;
        }
    }
-
+      
+   /* Adjust Icon Size for Large Screens (Desktop) */
+   @media (min-width: 1024px) {
+       .social-icons img {
+           width: 30px; /* Smaller icons for desktop */
+           height: 30px;
+       }
+   }
 
     /* Custom Positions for Each Logo */
     .whatsapp img{
